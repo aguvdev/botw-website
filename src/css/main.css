@@ -178,8 +178,25 @@ header{
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+#banner img{
+    padding: 0;
+    margin: 0;
+}
+
+h2{
+    font-size: 2.9rem;
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    color: white;
+
+    margin-bottom: 50px;
+}
+
 .red-link,
 .red-button{
+    text-transform: uppercase;
     border: 0;
     display: inline-flex;
     align-items: center;
@@ -229,6 +246,121 @@ header{
     transform: scaleX(1);
 } */
 
+/* -------------------------- VIDEOS ------------------------*/
+/* --------------------------------------------------------- */
+
+.w-75{
+    width: 75%;
+    margin: 0 auto;
+}
+
+h3{
+    font-size: 1.6em;
+    padding-top: 50px;
+    color: white;
+}
+
+#videos{
+    text-align: center;
+    padding: 50px 0;
+
+    background-image: url(../img/bg-videos.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: white;
+}
+
+#videos #slider #controls{
+    display: flex;
+    justify-content: center;
+}
+
+#videos #slider #controls #prev,
+#videos #slider #controls #next{
+    border: none;
+    height: 50px;
+    width: 80px;
+    background-color: rgb(77, 77, 77);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#videos #slider #controls #prev:hover,
+#videos #slider #controls #next:hover{
+    background-color: rgb(55, 55, 55);
+}
+
+#videos #slider #current{
+    width: 854px;
+    height: 482px;
+    margin: 50px auto;
+    border: solid 1px #00c3ff;
+}
+
+#videos #slider #videos-container{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    overflow: auto;
+}
+
+#videos #slider #videos-container .item{
+    border: solid 1px #00c3ff;
+    cursor: pointer;
+    overflow: hidden;
+
+    min-width: 210px;
+    min-height: 120px;
+
+    line-height: 0;
+}
+
+#videos #slider #videos-container .item a{
+    position: relative;
+}
+
+
+#videos #slider #videos-container .item img{
+    object-fit: contain;
+    width: 210px;
+    height: 120px;
+    min-width: 210px;
+    min-height: 120px;
+    padding: 0;
+    margin: 0;
+    transition: opacity 0.1s ease;
+}
+
+#videos #slider #videos-container .item:hover a img{
+    opacity: 0.7;
+}
+
+#videos #slider #videos-container .item a::before{
+    font-family: "Material Icons";
+    content: 'play_arrow';
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    display: block;
+    left: 86px;
+    top: -62px;
+    width: 35px;
+    height: 35px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
 @media screen and (max-width: 1190px) {
     nav .link-hide{
         display: none;
@@ -246,6 +378,15 @@ header{
         position: initial !important;
         z-index: 100;
         width: 100%;
+    }
+
+    #slider #current{
+        width: 90% !important;
+        line-height: 0;
+    }
+
+    #slider #current iframe{
+        width: 100% !important;
     }
 }
 
@@ -272,5 +413,20 @@ header{
         position: initial !important;
         z-index: 100;
         width: 100%;
+    }
+
+    #slider #current{
+        width: 302px !important;
+        height: 100% !important;
+        line-height: 0;
+    }
+
+    #slider #current iframe{
+        width: 300px;
+        height: 100%;
+    }
+
+    #slider #videos-container{
+        display: none !important;
     }
 }
