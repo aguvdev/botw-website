@@ -64,14 +64,14 @@ renderCurrentVideo(videos[current].id);
 renderVideos();
 
 function renderCurrentVideo(id){
-    currentContainer.innerHTML = `<iframe width="854" height="480" src="https://www.youtube.com/embed/${id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+    currentContainer.innerHTML = `<iframe width="854" height="100%" src="https://www.youtube.com/embed/${id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
 }
 
 function renderVideos(){
-    const html = videos.map(videos => {
+    const html = videos.map((videos, index) => {
         return `
         <div class="item">
-            <a href="#">
+            <a href="#" data-id="${index}">
                 <img src="https://i3.ytimg.com/vi/${videos.id}/maxresdefault.jpg" />
             </a>
         </div>
@@ -79,4 +79,15 @@ function renderVideos(){
     });
 
     videosContainer.innerHTML = html.join("");
-}
+
+    document.querySelectorAll('.item a').forEach(item => {
+        item.addEventListener('click', e => {
+            e.preventDefault();
+
+            const id = +item.getAttribute('data-id');
+            current = id;
+
+            renderCurrentVideo(videos[current].id);
+        });
+    });
+};
