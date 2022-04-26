@@ -12,3 +12,71 @@ moreOptions.addEventListener("click", (e) => {
     e.preventDefault();
     moreMenu.classList.toggle("show");
 });
+
+/* SLIDER DE VIDEOS */
+
+const videos = [
+    {
+        id: 'zw47_q9wbBE'
+    },
+    {
+        id: '1rPxiXXxftE'
+    },
+    {
+        id: 'NIrY56yg7dY'
+    },
+    {
+        id: 'PCBgyRC9i6w'
+    },
+    {
+        id: '3MtmDoWrV9k'
+    }
+];
+
+const sliderContainer = document.querySelector('#slider');
+const currentContainer = document.querySelector('#current');
+const videosContainer = document.querySelector('#videos-container');
+const bNext = document.querySelector('#next');
+const bPrev = document.querySelector('#prev');
+let current = 0;
+
+bNext.addEventListener('click', (e) => {
+    let changed = current;
+
+    current = current + 1 < videos.length ? current + 1: current;
+
+    if(current !== changed){
+        renderCurrentVideo(videos[current].id);
+    }
+});
+
+bPrev.addEventListener('click', (e) => {
+    let changed = current;
+
+    current = current - 1 >= 0 ? current -1: current;
+
+    if(current !== changed){
+        renderCurrentVideo(videos[current].id);
+    }
+});
+
+renderCurrentVideo(videos[current].id);
+renderVideos();
+
+function renderCurrentVideo(id){
+    currentContainer.innerHTML = `<iframe width="854" height="480" src="https://www.youtube.com/embed/${id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+}
+
+function renderVideos(){
+    const html = videos.map(videos => {
+        return `
+        <div class="item">
+            <a href="#">
+                <img src="https://i3.ytimg.com/vi/${videos.id}/maxresdefault.jpg" />
+            </a>
+        </div>
+        `;
+    });
+
+    videosContainer.innerHTML = html.join("");
+}
