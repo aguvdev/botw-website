@@ -1,0 +1,192 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+
+    background-color: black;
+}
+
+/* -------------------------- NAVBAR ------------------------*/
+/* --------------------------------------------------------- */
+
+.show{
+    display: flex !important;/* porque debemos sobreescribir cualquier estado que tengan nuestros elementos */
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li > a{
+    display: block;
+    position: relative;
+    padding: 20px 15px 10px 15px;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px black;
+
+    color: white;
+}
+
+nav ul li .link::before{
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+
+    background-color: rgb(207, 207, 207);
+}
+
+nav ul li .link:hover::before{
+    transform: scaleX(1);
+}
+
+nav .more{
+    display: none;
+}
+
+nav .menu{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    min-width: 200px;
+    margin-top: 52px;
+
+    background-color: #e4040c;
+}
+
+nav .menu a{
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav .menu a:hover{
+    background-color: black;
+    color: white;
+}
+
+/* ------------------------ NAVBAR MOBILE-------------------------- */
+/* ------------------------------------------------------------- */
+
+nav .mobile{
+    display: none;
+    width: 100%;
+}
+
+nav .mobile .header{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    background-color: #e4040c;
+}
+
+nav .mobile .header a{
+    color: white;
+    display: inline-flex;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav .mobile .header #bmenu{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    color: white;
+}
+
+nav .mobile .links{
+    display: none;
+    flex-direction: column;
+    position: relative;
+    z-index: 200;
+
+    background-color: #e4040c;
+}
+
+nav .mobile .links a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px black;
+
+    color: white;
+}
+
+nav .mobile .links a:hover{
+    font-size: 20px;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+
+    color: black;
+    background-color: white;
+}
+
+/* -------------------------- HEADER ------------------------*/
+/* --------------------------------------------------------- */
+
+header{
+    background-image: url(../img/botw-cover-darkmode.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+@media screen and (max-width: 1190px) {
+    nav .link-hide{
+        display: none;
+    }
+
+    nav .more{
+        display: flex;
+    }
+
+    header{
+        height: 70vh;
+    }
+}
+
+@media screen and (max-width: 669px) {
+
+    nav{
+        width: 100%;
+        padding: 0;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    nav .mobile{
+        display: block;
+    }
+
+    header{
+        height: 30vh;
+    }
+}
