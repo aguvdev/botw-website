@@ -2,6 +2,20 @@
     --color-nintendo: #e4040c;
 }
 
+body::-webkit-scrollbar {
+    width: 12px;               /* ancho de todo el scrollbar */
+}
+  
+body::-webkit-scrollbar-track {
+    background: #333;        /* color del area de recorrido de la barra */
+}
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--color-nintendo);    /* color de la barrita que se desplaza (scroll thumb) */
+    border-radius: 20px;       /* bordes redondeados del scroll thumb */
+    border: 3px solid var(--color-nintendo);  /* crea espacios (si es necesario) al rededor del scroll thumb */
+}
+
 *{
     box-sizing: border-box;
 }
