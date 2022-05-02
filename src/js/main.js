@@ -97,8 +97,12 @@ function renderVideos(){
 
 const saveH = document.getElementById('save-h');
 const sinops = document.getElementById('sinop');
-const banner = document.getElementById('banner');
+const bannerImg = document.getElementById('banner-img');
+const bannerBtn = document.getElementById('banner-btn');
+const bannerBtn2 = document.getElementById('banner-btn2');
+const bannerText = document.getElementById('banner-text');
 const navH = document.getElementById('nav-h');
+const navH2 = document.getElementById('nav-h2');
 
 const desplazarArriba = (entradas, observador) => {
     /* console.log(entradas);
@@ -107,8 +111,6 @@ const desplazarArriba = (entradas, observador) => {
     entradas.forEach((entrada) => {
         if(entrada.isIntersecting){
             entrada.target.classList.add('visible');
-        } else {
-            entrada.target.classList.remove('visible');
         }
     });
 };
@@ -121,6 +123,10 @@ const observador = new IntersectionObserver(desplazarArriba, {
 
 observador.observe(saveH);
 observador.observe(sinops);
-observador.observe(banner);
+observador.observe(bannerImg);
+observador.observe(bannerBtn);
+observador.observe(bannerBtn2);
+observador.observe(bannerText);
 observador.observe(navH);
+observador.observe(navH2);
 observador.observe(sliderContainer);
