@@ -91,3 +91,17 @@ function renderVideos(){
         });
     });
 };
+
+
+/* -----------------INTERSECTION OBSERVER---------------- */
+
+const saveH = document.getElementById('save-h');
+const sinops = document.getElementById('sinop');
+
+const desplazarArriba = () => {};
+
+const observador = new IntersectionObserver(desplazarArriba, {
+    root: null,
+    rootMargin: '0px 0px 0px 0px',
+    
+});
