@@ -223,7 +223,11 @@ h2{
 
 #slider,
 #nav-h,
-#banner,
+#nav-h2,
+#banner-img,
+#banner-btn,
+#banner-btn2,
+#banner-text,
 #sinop,
 #save-h{
     opacity: 0;
@@ -233,7 +237,11 @@ h2{
 
 #slider.visible,
 #nav-h.visible,
-#banner.visible,
+#nav-h2.visible,
+#banner-img.visible,
+#banner-btn.visible,
+#banner-btn2.visible,
+#banner-text.visible,
 #sinop.visible,
 #save-h.visible{
     opacity: 1;
