@@ -2,19 +2,6 @@
     --color-nintendo: #e4040c;
 }
 
-body::-webkit-scrollbar {
-    width: 12px;               /* ancho de todo el scrollbar */
-}
-  
-body::-webkit-scrollbar-track {
-    background: #333;        /* color del area de recorrido de la barra */
-}
-  
-  body::-webkit-scrollbar-thumb {
-    background-color: var(--color-nintendo);    /* color de la barrita que se desplaza (scroll thumb) */
-    border-radius: 20px;       /* bordes redondeados del scroll thumb */
-    border: 3px solid var(--color-nintendo);  /* crea espacios (si es necesario) al rededor del scroll thumb */
-}
 
 *{
     box-sizing: border-box;
@@ -26,8 +13,22 @@ body{
     padding: 0;
     margin: 0;
     line-height: 1.5;
-
+    
     background-color: black;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;               /* ancho de todo el scrollbar */
+}
+  
+body::-webkit-scrollbar-track {
+    background: #333;        /* color del area de recorrido de la barra */
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-nintendo);    /* color de la barrita que se desplaza (scroll thumb) */
+    border-radius: 20px;       /* bordes redondeados del scroll thumb */
+    border: 3px solid var(--color-nintendo);  /* crea espacios (si es necesario) al rededor del scroll thumb */
 }
 
 /* -------------------------- NAVBAR ------------------------*/
@@ -49,6 +50,7 @@ nav ul{
     list-style: none;
     padding: 0;
     margin: 0;
+    padding-left: 50px;
 }
 
 nav ul li > a{
@@ -59,6 +61,12 @@ nav ul li > a{
     text-shadow: 1px 1px 2px black;
 
     color: white;
+}
+
+nav ul li > a img {
+    position: absolute;
+    left: -64px;
+    top: 16px;
 }
 
 nav ul li .link::before{
@@ -90,7 +98,7 @@ nav .menu{
     min-width: 200px;
     margin-top: 52px;
 
-    background-color: var(--color-nintendo);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 nav .menu a{
@@ -100,7 +108,7 @@ nav .menu a{
 }
 
 nav .menu a:hover{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.4);
     color: white;
 }
 
@@ -404,7 +412,7 @@ h3{
     }
 }
 
-@media screen and (max-width: 669px) {
+@media screen and (max-width: 680px) {
 
     nav{
         width: 100%;
