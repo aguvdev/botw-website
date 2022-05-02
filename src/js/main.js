@@ -97,11 +97,30 @@ function renderVideos(){
 
 const saveH = document.getElementById('save-h');
 const sinops = document.getElementById('sinop');
+const banner = document.getElementById('banner');
+const navH = document.getElementById('nav-h');
 
-const desplazarArriba = () => {};
+const desplazarArriba = (entradas, observador) => {
+    /* console.log(entradas);
+    console.log(observador); */
+
+    entradas.forEach((entrada) => {
+        if(entrada.isIntersecting){
+            entrada.target.classList.add('visible');
+        } else {
+            entrada.target.classList.remove('visible');
+        }
+    });
+};
 
 const observador = new IntersectionObserver(desplazarArriba, {
     root: null,
     rootMargin: '0px 0px 0px 0px',
-    
+    threshold: 0.5
 });
+
+observador.observe(saveH);
+observador.observe(sinops);
+observador.observe(banner);
+observador.observe(navH);
+observador.observe(sliderContainer);
