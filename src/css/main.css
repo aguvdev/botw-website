@@ -125,6 +125,8 @@ nav .mobile .header{
     text-align: center;
     justify-content: space-between;
     flex-direction: row;
+    opacity: 1 !important;
+    transform: scale(1) !important;
 
     background-color: var(--color-nintendo);
 }
@@ -214,6 +216,28 @@ h2{
     color: white;
 
     margin-bottom: 50px;
+}
+
+/* ----------------Intersection observer------------ */
+/* ------------------------------------------------- */
+
+#slider,
+#nav-h,
+#banner,
+#sinop,
+#save-h{
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity, transform 0.7s ease-in-out;
+}
+
+#slider.visible,
+#nav-h.visible,
+#banner.visible,
+#sinop.visible,
+#save-h.visible{
+    opacity: 1;
+    transform: scale(1);
 }
 
 .red-link,
@@ -435,6 +459,8 @@ h3{
         position: initial !important;
         z-index: 100;
         width: 100%;
+        opacity: 1;
+        transform: scale(1);
     }
 
     #slider #current{
