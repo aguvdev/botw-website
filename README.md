@@ -2,4 +2,4 @@
 
 Es un website simulando la pagina de este increible juego.
 
-[The legend of Zelda: Breath of the wild.](https://demo-botw-website.vercel.app/)
+<a href="https://demo-botw-website.vercel.app/" target="_blank">The legend of Zelda: Breath of the wild. (demo)</a>
