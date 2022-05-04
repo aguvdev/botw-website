@@ -1,0 +1,24 @@
+{
+  "name": "botw-website",
+  "version": "1.0.0",
+  "description": "Es un website simulando la pagina de este increible juego.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aguvdev/botw-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aguvdev/botw-website/issues"
+  },
+  "homepage": "https://github.com/aguvdev/botw-website#readme",
+  "dependencies": {
+    "vite": "^2.9.7"
+  }
+}
