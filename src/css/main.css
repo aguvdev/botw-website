@@ -415,6 +415,38 @@ h3{
     opacity: 1;
 }
 
+/* -------------------------- DLCS ------------------------*/
+/* --------------------------------------------------------- */
+
+#dlc-section{
+    height: 100vh;
+    background-image: url('/src/img/bg-dlc.png');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+    padding: 40px;
+    width: 600px;
+    margin-right: 50px;
+}
+
+.info img{
+    width: 400px;
+}
+
+.info p{
+    font-size: 20px;
+}
+
 @media screen and (max-width: 1190px) {
     nav .link-hide{
         display: none;
@@ -441,6 +473,17 @@ h3{
 
     #slider #current iframe{
         width: 100% !important;
+    }
+
+    #dlc-section{
+        background-position: center left;
+    }
+
+    .info{
+        width: 600px;
+        margin: 0 auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
     }
 }
 
@@ -484,5 +527,14 @@ h3{
 
     #slider #videos-container{
         display: none !important;
+    }
+
+    #dlc-section{
+        background-position: -50px 0px;
+    }
+
+    .info{
+        width: 90%;
+        margin: 0 auto;
     }
 }
