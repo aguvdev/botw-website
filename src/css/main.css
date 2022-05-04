@@ -490,7 +490,14 @@ h3{
     width: 80%;
 }
 
+footer{
+    height: 600px;
 
+    background-image: url('/src/img/footer-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
 @media screen and (max-width: 1190px) {
     nav .link-hide{
