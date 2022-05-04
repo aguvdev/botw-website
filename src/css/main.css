@@ -437,6 +437,8 @@ h3{
     padding: 40px;
     width: 600px;
     margin-right: 50px;
+
+    transition: background 0.3s ease;
 }
 
 .info img{
@@ -446,6 +448,49 @@ h3{
 .info p{
     font-size: 20px;
 }
+
+/* -------------------------- GET THE GAME - STORE ------------------------*/
+/* --------------------------------------------------------- */
+
+#get-the-game{
+    text-align: center;
+    padding: 50px 0;
+
+    color: white;
+}
+
+#get-the-game h2{
+    color: white;
+}
+
+#get-the-game h3{
+    padding: 0;
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+#get-the-game .item-store{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#get-the-game .item-store .left{
+    padding: 0 20px;
+    width: 100%;
+}
+
+#get-the-game .item-store .left img{
+    width: 300px;
+}
+
+#get-the-game .item-store .right{
+    text-align: left;
+    width: 80%;
+}
+
+
 
 @media screen and (max-width: 1190px) {
     nav .link-hide{
@@ -484,6 +529,19 @@ h3{
         margin: 0 auto;
         background-color: rgba(0, 0, 0, 0.8);
         color: white;
+    }
+
+    #get-the-game .item-store{
+        width: 100%;
+        padding: 20px;
+    }
+
+    #get-the-game .item-store .left img{
+        width: 200px;
+    }
+
+    #get-the-game .item-store .right{
+        width: 100%;
     }
 }
 
@@ -536,5 +594,25 @@ h3{
     .info{
         width: 90%;
         margin: 0 auto;
+    }
+
+    .info img{
+        width: 100%;
+    }
+
+    #get-the-game .item-store{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+    }
+
+    #get-the-game .item-store .left img{
+        width: 200px;
+    }
+
+    #get-the-game .item-store .right{
+        text-align: center;
+        width: 100%;
     }
 }
